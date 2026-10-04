@@ -7,3 +7,6 @@ _old/
 next-env.d.ts
 .preview/
 .claude/
+
+reel/node_modules/
+reel/out/
