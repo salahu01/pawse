@@ -145,13 +145,13 @@ export default function Home() {
                   <ul>{p.chips.map((c) => <li className="chip" key={c}>{c}</li>)}</ul>
                 </div>
                 <div className="comp">
-                  <div className="shot" data-par="-6"><img src={asset(p.shot)} alt={p.alt} loading="lazy" /></div>
+                  <div className="shot" data-par="-6"><img src={asset(p.shot)} alt={p.alt} /></div>
                   {p.cards.map((c) => (
                     <div className="fc glass" key={c.small} style={c.pos} data-par="14">
                       <div className="big">{c.big}</div><small>{c.small}</small>
                     </div>
                   ))}
-                  <img className="pet" src={asset(`/media/pets/${p.pet}.png`)} alt="" style={{ left: "38%", bottom: "-4%" }} data-par="24" loading="lazy" />
+                  <img className="pet" src={asset(`/media/pets/${p.pet}.png`)} alt="" style={{ left: "38%", bottom: "-4%" }} data-par="24" />
                 </div>
               </article>
             ))}
@@ -188,7 +188,7 @@ export default function Home() {
                   <span className="dot" />
                   <div className="time">{d.t}</div>
                   <div className="card glass">
-                    <img src={asset(`/media/pets/${d.pet}.png`)} alt="" loading="lazy" />
+                    <img src={asset(`/media/pets/${d.pet}.png`)} alt="" />
                     <div><h3>{d.h}</h3><p>{d.p}</p></div>
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export default function Home() {
               </p>
               <HardBlockDemo />
             </div>
-            <div className="lockvis" data-unmask><img src={asset("/media/screen-block.jpg")} alt="Pawse hard block screen with a Done button" loading="lazy" /></div>
+            <div className="lockvis" data-unmask><img src={asset("/media/screen-block.jpg")} alt="Pawse hard block screen with a Done button" /></div>
           </div>
         </section>
 

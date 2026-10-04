@@ -66,13 +66,17 @@ export function HeroBubble() {
 /** Pet cards with mood toggles; tilt is handled by the motion layer via [data-tilt]. */
 export function PetGrid() {
   const [moods, setMoods] = useState<Record<string, string>>({});
+  // Warm every mood variant so toggling never shows an empty card.
+  useEffect(() => {
+    pets.forEach((p) => ["happy", "sad"].forEach((m) => { new Image().src = asset(`/media/pets/${p.id}-${m}.png`); }));
+  }, []);
   return (
     <div className="pets">
       {pets.map((p) => {
         const m = moods[p.id] ?? "asking";
         return (
           <article className="petc glass" data-tilt data-stagger key={p.id}>
-            <img src={asset(`/media/pets/${p.id}-${m}.png`)} alt={`${p.name}, a Pawse pet, looking ${m === "asking" ? "curious" : m}`} loading="lazy" width={150} height={150} />
+            <img src={asset(`/media/pets/${p.id}-${m}.png`)} alt={`${p.name}, a Pawse pet, looking ${m === "asking" ? "curious" : m}`} width={150} height={150} />
             <h3>{p.name}</h3>
             <p>{p.desc}</p>
             <div className="moods" role="group" aria-label={`${p.name}'s mood`}>
