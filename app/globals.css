@@ -82,8 +82,8 @@ h1{font-weight:inherit}
 .f-kid{width:clamp(130px,14vw,230px);right:7vw;top:13vh;z-index:4}
 .f-cat{width:clamp(80px,8vw,140px);left:52vw;top:11vh}
 .f-pen{width:clamp(70px,7vw,120px);left:47vw;bottom:24vh}
-.f-cap{width:clamp(100px,11vw,190px);left:3vw;bottom:5vh;opacity:.9}
-.f-bun{width:clamp(70px,8vw,130px);right:2vw;bottom:24vh}
+.f-cap{width:clamp(100px,10vw,170px);right:29vw;bottom:33vh;opacity:.95}
+.f-bun{width:clamp(70px,7vw,115px);left:61vw;bottom:10vh}
 @media (max-width:900px){.f-cat,.f-pen,.f-kid{display:none}.f-bun{bottom:auto;top:12vh}}
 
 /* hero interactive bubble */
