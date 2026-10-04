@@ -59,11 +59,12 @@ for i in range(5): add(sfx, pop(800 + i * 140, 300), 56.4 + i * .1, .35, (i - 2)
 
 def load(name):
     import subprocess
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(SND, name + ".wav"), "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True).stdout
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", name + ".wav", "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True).stdout
     return np.frombuffer(raw, np.float32).astype(np.float64)
-for name, at in [("kid_ask_0", 6.1), ("kid_sad", 8.4), ("kid_plead", 16.95), ("kid_happy", 19.3), ("kid_habit", 25.5),
-                 ("kid_break", 37.15), ("kid_breakstart", 39.2), ("kid_breakdone", 43.7), ("kid_goal", 50.2)]:
-    add(voice, load(name), at, 1.0, .25)
+VO = os.path.join(here, "voice")
+for name, at in [("ask", 6.1), ("sad", 8.4), ("plead", 16.95), ("happy", 19.35), ("habit", 25.5), ("thanks", 31.6),
+                 ("break", 37.15), ("breakstart", 39.25), ("breakdone", 43.7), ("goal", 50.3)]:
+    add(voice, load(os.path.join(VO, name)), at, 1.0, .25)
 
 venv = np.convolve(np.abs(voice[:, 0]), np.ones(2205) / 2205, "same")
 duck = 1 - np.clip(venv * 7, 0, .6)

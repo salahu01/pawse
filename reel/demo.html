@@ -285,13 +285,13 @@ function build() {
   walk(OFF, PX, 3.6, 2.4);
   say("Then <em>this</em> little one walks onto your screen 👀", 3.7, 2.2);
   setPet("asking", 3.6);
-  msg("Heyyy, hey! Did you drink water? 💧", 6.1, ["Yes! 💧", "Not yet"]);
+  msg("Hey hey! Did you drink water? 💧", 6.1, ["Yes! 💧", "Not yet"]);
   move(1832, 655, 6.6, 1.1);
   say("Me: <em>“not now, I'm busy”</em> 🙄", 6.9, 1.6);
   click(8.1);
   hideBubble(8.2);
   setPet("sad", 8.25);
-  msg("Awww… okayyy. Momo comes back soon 🥺", 8.4);
+  msg("Oh, okay. Momo comes back soon 🥺", 8.4);
   move(1150, 520, 8.6, 1.0);
   hideBubble(11.0);
   walk(PX, OFF, 11.1, 1.6, true);
@@ -305,7 +305,7 @@ function build() {
   cam(...PETCAM, 14.8, .01);
   walk(OFF, PX, 15.0, 1.9);
   say("She came back. <em>With puppy eyes.</em> 🥺", 15.3, 2.3);
-  msg("Pleeease? Just one sip? 🥺", 16.95, ["Yes! 💧", "Not yet"]);
+  msg("Please? Just one sip? 🥺", 16.95, ["Yes! 💧", "Not yet"]);
   move(1688, 655, 17.6, 1.0);
   say("Fine. <em>ONE</em> sip. 💧", 18.4, 2.6);
   click(19.0);
@@ -313,7 +313,7 @@ function build() {
   setPet("happy", 19.15);
   tl.to("#petImg", { y: -60, duration: .22, ease: "power2.out" }, 19.15).to("#petImg", { y: 0, duration: .35, ease: "bounce.out" }, 19.37);
   hearts(19.2, PX + 140, 820);
-  msg("Yaaay! 1/8 glasses 💙", 19.4);
+  msg("Yay! One glass done! 💙", 19.4);
   tl.to(state, { glasses: 1, duration: .01, onUpdate: paint }, 19.3)
     .fromTo("#status", { backgroundColor: "rgba(89,166,255,.0)" }, { backgroundColor: "rgba(89,166,255,.55)", duration: .2, yoyo: true, repeat: 3, immediateRender: false }, 19.3);
   move(1000, 560, 19.8, 1.0);
@@ -358,7 +358,7 @@ function build() {
   click(39.0);
   hideBubble(39.1);
   setPet("happy", 39.1);
-  msg("Yaaay! Let's rest togetherrr! 💜", 39.2);
+  msg("Let's rest together! 💜", 39.2);
   cam(960, 540, 1, 39.5, .6);
   tl.set("#brk", { visibility: "visible" }, 39.6).to("#brk", { opacity: 1, duration: .5 }, 39.6)
     .set("#pet", { left: OFF }, 40.1).set("#bubble", { scale: 0 }, 40.1);
@@ -367,7 +367,7 @@ function build() {
     .to("#brkArc", { attr: { "stroke-dashoffset": 1193.8 }, duration: 3.6, ease: "power1.inOut" }, 40.0)
     .to("#brkPet", { y: -10, duration: .6, yoyo: true, repeat: 5, ease: "sine.inOut" }, 40.0);
   say("5-minute break. <em>20-20-20</em> for the eyes. ☕", 40.2, 3.0);
-  tl.call(() => { $("#brkT").textContent = "Break's over! 🎉"; $("#brkTip").textContent = "Break's overrr! You did so great! 💜"; }, null, 43.7);
+  tl.call(() => { $("#brkT").textContent = "Break's over! 🎉"; $("#brkTip").textContent = "Break's over. You did so great! 💜"; }, null, 43.7);
   hearts(43.75, 960, 380, 10);
   tl.to("#brk", { opacity: 0, duration: .5 }, 45.0).set("#brk", { visibility: "hidden" }, 45.5);
 
