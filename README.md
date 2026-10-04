@@ -26,8 +26,9 @@ npm run dev        # http://localhost:3000/pawse
 npm run build      # static export -> out/
 ```
 
-Pushing to `main` deploys to GitHub Pages via `.github/workflows/pages.yml`. To verify the site in
-Google Search Console, set the repository variable `GOOGLE_SITE_VERIFICATION` to the HTML-tag token.
+Deploy with `npm run deploy` (builds and pushes `out/` to the `gh-pages` branch, which Pages serves).
+`.github/workflows/pages.yml` does the same from CI if you switch Pages to "GitHub Actions" as the source.
+For Google Search Console verification, build with `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=<token>`.
 
 ## Licence
 

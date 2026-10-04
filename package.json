@@ -10,7 +10,8 @@
     "build": "next build",
     "export": "STATIC_EXPORT=1 next build",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "bash scripts/deploy_pages.sh"
   },
   "dependencies": {
     "gsap": "^3.15.0",
