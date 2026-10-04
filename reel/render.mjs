@@ -8,13 +8,14 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const FPS = 30, W = 1080, H = 1350;
+const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
+const FPS = 30, PAGE = arg("--page", "index.html"), W = +arg("--w", 1080), H = +arg("--h", 1350), OUT = arg("--out", "frames.mp4");
 mkdirSync(path.join(dir, "out"), { recursive: true });
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 page.on("pageerror", (e) => console.error("pageerror:", e.message));
-await page.goto("file://" + path.join(dir, "index.html"));
+await page.goto("file://" + path.join(dir, PAGE));
 const duration = await page.evaluate(() => window.__ready);
 
 const si = process.argv.indexOf("--stills");
@@ -25,11 +26,11 @@ if (si > 0) {
   for (const t of ts) {
     for (; cur <= t; cur += 1 / FPS) await page.evaluate((x) => window.__seek(x), cur);
     await page.evaluate((x) => window.__seek(x), t);
-    await page.screenshot({ path: path.join(dir, "out", `still-${t}.png`) });
+    await page.screenshot({ path: path.join(dir, "out", `${PAGE.split(".")[0]}-still-${t}.png`) });
   }
 } else {
   const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(FPS), "-i", "-",
-    "-c:v", "libx264", "-preset", "slow", "-crf", "14", "-pix_fmt", "yuv420p", path.join(dir, "out", "frames.mp4")], { stdio: ["pipe", "inherit", "inherit"] });
+    "-c:v", "libx264", "-preset", "slow", "-crf", "14", "-pix_fmt", "yuv420p", path.join(dir, "out", OUT)], { stdio: ["pipe", "inherit", "inherit"] });
   const n = Math.round(duration * FPS);
   for (let f = 0; f < n; f++) {
     await page.evaluate((x) => window.__seek(x), f / FPS);
