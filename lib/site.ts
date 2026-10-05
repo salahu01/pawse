@@ -4,7 +4,7 @@ export const BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH ?? "/pawse").replace
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://salahu01.github.io/pawse").replace(/\/$/, "");
 export const REPO = "https://github.com/salahu01/pawse-app";
 export const DOWNLOAD = `${REPO}/releases/latest`;
-export const VERSION = "1.0.0";
+export const VERSION = "1.0.1";
 /** Prefix for files in /public (static export does not add basePath to plain <img> src). */
 export const asset = (p: string) => `${BASE_PATH}${p}`;
 export const absoluteUrl = (p = "/") => `${SITE_URL}${p === "/" ? "/" : p}`;
