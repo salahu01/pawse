@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://salahu01.github.io/pawse
+Sitemap: https://salahu01.github.io/pawse/sitemap.xml

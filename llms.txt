@@ -1,0 +1,21 @@
+# Pawse
+
+> Pawse is a free, open-source macOS menu bar app. A cute 3D pet walks onto your screen to remind you to drink water, keep habits like stretching every 30 minutes, and take screen-time breaks, with an optional hard block.
+
+- Platform: macOS 13 Ventura or later · Apple silicon & Intel
+- Price: free, open source (MIT)
+- Latest version: 1.0.1
+- Download: https://github.com/salahu01/pawse-app/releases/latest
+- Source code: https://github.com/salahu01/pawse-app
+- Privacy: works offline, no network requests, no analytics, no account
+
+## Features
+- Stay hydrated: Set a daily goal and glass size. Your pet visits on your schedule, only during your active hours, and stops once you reach your goal.
+- Habits on any interval: Stretch every 30 minutes, walk every 45, rest your eyes every 20. Create any habit with an emoji, a daily goal and a reminder interval, and your pet asks about it.
+- Screen time that cares: Pawse measures how long you have actively used your Mac. Stepping away for 3 minutes counts as a break. After 30 minutes of continuous use, your pet suggests one.
+- Hard block: optional full-screen lock for water, any habit or breaks that unlocks only when you confirm (emergency: hold Esc 5 s).
+- Pets: Momo the Chibi (voiced), Mochi the Cat, Pip the Penguin, Yuzu the Capybara, Boo the Ghost Bunny; any .usdz model can be added.
+
+## Optional
+- [Full details and FAQ](https://salahu01.github.io/pawse/llms-full.txt)
+- [Website](https://salahu01.github.io/pawse/)

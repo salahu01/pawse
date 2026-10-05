@@ -1,0 +1,65 @@
+# Pawse: Cute Water, Habit & Break Reminder for Mac
+
+Pawse is a free, open-source macOS menu bar app. A cute 3D pet walks onto your screen to remind you to drink water, keep habits like stretching every 30 minutes, and take screen-time breaks, with an optional hard block.
+
+Website: https://salahu01.github.io/pawse/  Download: https://github.com/salahu01/pawse-app/releases/latest  Source: https://github.com/salahu01/pawse-app
+Requirements: macOS 13 Ventura or later · Apple silicon & Intel
+
+## Features
+### Stay hydrated
+Set a daily goal and glass size. Your pet visits on your schedule, only during your active hours, and stops once you reach your goal.
+- Animated water glass and streaks
+- 7-day chart and month calendar
+- Log a glass from the menu bar in one click
+
+### Habits on any interval
+Stretch every 30 minutes, walk every 45, rest your eyes every 20. Create any habit with an emoji, a daily goal and a reminder interval, and your pet asks about it.
+- Any interval from 1 minute to 12 hours
+- Per-habit streaks, chart and calendar
+- Presets: stretch, eyes, posture, walk, vitamins
+
+### Screen time that cares
+Pawse measures how long you have actively used your Mac. Stepping away for 3 minutes counts as a break. After 30 minutes of continuous use, your pet suggests one.
+- Today by hour and the last 7 days
+- Breaks taken and skipped
+- Optional daily screen-time limit
+
+## Pets
+- Momo: The chatty chibi. Has a real voice, offers you a water bottle and takes a big sip when you do.
+- Mochi: Tail swishes, ears twitch, and a meow you won't want to ignore.
+- Pip: Waddles in and flaps both flippers when you drink. Pure joy.
+- Yuzu: Calm, chill, and carrying an orange on its head. Squeaks softly.
+- Boo: A gentle ghost bunny that floats in, ears streaming. Ooo~
+
+## Install
+1. Download: Download the latest Pawse .dmg from GitHub Releases.
+2. Install: Open the .dmg and drag Pawse into your Applications folder.
+3. Open: Open Pawse. It lives in the menu bar, and your pet walks in to say hi. On first launch, if macOS cannot verify the developer, right-click Pawse → Open → Open.
+
+## FAQ
+### What is Pawse?
+Pawse is a free, open-source macOS menu bar app that reminds you to drink water, keep your habits and take breaks. Instead of a notification, a cute 3D pet walks onto your screen and asks you, for example "Did you drink water?". You answer yes or not yet.
+
+### Is Pawse free?
+Yes. Pawse is completely free and open source under the MIT licence. There are no ads, subscriptions, in-app purchases or accounts.
+
+### Which Macs and macOS versions does Pawse support?
+Pawse runs on macOS 13 Ventura, macOS 14 Sonoma, macOS 15 Sequoia and newer, on both Apple silicon (M1, M2, M3, M4) and Intel Macs. The download is a universal app.
+
+### How do I get a reminder to stretch every 30 minutes on my Mac?
+Open Pawse → Habits → Add → Stretch (or a custom habit), turn on "Pet reminds me" and set the interval to 30 minutes. Your pet will walk in every 30 minutes and ask "Did you stretch?". You can use any interval for any habit.
+
+### Can Pawse remind me to take breaks from the screen?
+Yes. Pawse tracks active screen time from keyboard and mouse activity and, after 30 minutes of continuous use (adjustable), asks you to take a break. Breaks show a calm full-screen countdown with tips like the 20-20-20 eye rule. Stepping away for 3 minutes counts as a break automatically.
+
+### What is hard block?
+Hard block is an optional mode for water, any habit or breaks. When a reminder is due, the pet covers the whole screen and it only unlocks when you confirm you did it. Breaks in hard block cannot be snoozed or ended early. For safety, holding Esc for 5 seconds always unlocks.
+
+### Does Pawse collect my data?
+No. Pawse makes no network requests and has no analytics or accounts. Your history stays on your Mac. For screen time it reads only how many seconds ago you last pressed a key or moved the mouse, never what you type or which apps you use.
+
+### Which pets are included?
+Five 3D pets: Momo the Chibi (with a voice), Mochi the Cat, Pip the Penguin, Yuzu the Capybara and Boo the Ghost Bunny. You can also drop any .usdz 3D model into Pawse to use it as a pet.
+
+### How is Pawse different from other water or break reminder apps?
+Most reminder apps send notifications that are easy to swipe away. Pawse combines water tracking, habit reminders on any interval and screen-time breaks in one app, delivered by an animated pet with expressions and sounds, plus an optional hard block for habits you're serious about.
