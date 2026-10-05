@@ -254,3 +254,8 @@ footer a:hover{color:var(--ink)}
   .manifesto-pet{opacity:1}
   .jline i{transform:none}
 }
+
+.ph-badge{display:inline-block;margin-top:18px;border-radius:12px;transition:transform .25s}
+.ph-badge:hover{transform:translateY(-2px)}
+.ph-badge img{display:block;height:54px;width:250px}
+#cta .ph-badge{display:table;margin:22px auto 0}

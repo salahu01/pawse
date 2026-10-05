@@ -4,6 +4,8 @@ export const BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH ?? "/pawse").replace
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://salahu01.github.io/pawse").replace(/\/$/, "");
 export const REPO = "https://github.com/salahu01/pawse-app";
 export const DOWNLOAD = `${REPO}/releases/latest`;
+export const PRODUCT_HUNT = "https://www.producthunt.com/products/pawse-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-pawse-2";
+export const PRODUCT_HUNT_BADGE = "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1270088&theme=dark";
 export const VERSION = "1.0.1";
 /** Prefix for files in /public (static export does not add basePath to plain <img> src). */
 export const asset = (p: string) => `${BASE_PATH}${p}`;

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- static export: plain <img> with basePath-aware src */
 import { HardBlockDemo, HeroBubble, PetGrid } from "@/components/Interactive";
 import Showreel from "@/components/Showreel";
-import { DOWNLOAD, REPO, VERSION, asset, faqs, site } from "@/lib/site";
+import { DOWNLOAD, REPO, VERSION, asset, faqs, site, PRODUCT_HUNT, PRODUCT_HUNT_BADGE } from "@/lib/site";
 
 const marquee = ["drink water", "stretch", "rest your eyes", "take a break", "fix posture", "go for a walk", "breathe", "take a pawse"];
 
@@ -104,6 +104,7 @@ export default function Home() {
                   <a className="btn ghost" href={REPO} data-magnetic><span className="lbl">★ Star on GitHub</span></a>
                 </div>
                 <p className="meta">Free · open source · {site.requirements} · v{VERSION}</p>
+                <a className="ph-badge" href={PRODUCT_HUNT} target="_blank" rel="noopener"><img src={PRODUCT_HUNT_BADGE} alt="Pawse on Product Hunt" width={250} height={54} /></a>
               </div>
               <HeroBubble />
             </div>
@@ -266,6 +267,7 @@ export default function Home() {
           <a className="btn" href={DOWNLOAD} data-magnetic data-cursor="Get it" style={{ fontSize: 19, padding: "20px 38px" }}>
             <span className="lbl">⬇ Download Pawse for Mac</span>
           </a>
+          <a className="ph-badge" href={PRODUCT_HUNT} target="_blank" rel="noopener"><img src={PRODUCT_HUNT_BADGE} alt="Pawse on Product Hunt" width={250} height={54} /></a>
           <p className="note">
             First launch: if macOS can&apos;t verify the developer, right-click Pawse in Applications → <b>Open</b> → <b>Open</b>. Requires {site.requirements}.
           </p>
